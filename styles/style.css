@@ -1,0 +1,289 @@
+/*------------------------------- Variables CSS couleurs --------------------------------------*/
+:root{
+    --bgcolor: #eae8e8;
+    --color: #1f3ebb;
+    --containerbg: #f2f2f2;
+    --shadowbx: #a6a5a5;
+    --button-color-v: #1bab02;
+    --button-color-f: #ce0404;
+    --hover-color-v:#028115;
+    --hover-color-f:#b80404;
+    --border-radus: 5px;
+}
+
+/*------------------------------- Contenu général du body --------------------------------------*/
+body{
+    color: var(--color);
+    height: auto;
+    width: auto;
+    text-align: center;
+    background: var(--bgcolor);
+
+}
+i{
+  background: var(--bgcolor);
+  text-decoration: none;
+}
+
+/*------------------------------- Conteneurs --------------------------------------*/
+.conteneur-general{
+    border-radius: var(--border-radus);
+    background-color: var(--containerbg);
+    padding: 15px;
+    margin: 25px;
+    height: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+    box-shadow: 5px 5px 15px var(--shadowbx) ;
+}
+
+.conteneur-form{
+    width: 15em;
+    border: 0px solid;
+    box-shadow: 10px 10px 5px var(--shadowbx) ;
+    padding: 8px 12px;
+    text-align: center;
+    border-radius: var(--border-radus);
+  }
+
+  .container-table {  
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows:  auto auto auto;
+    grid-gap: 5px;
+    padding: 15px;
+    margin: 25px;
+    height: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+    border-radius: var(--border-radus);
+  }
+
+  .container-table > div {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    border-radius: var(--border-radus);
+  }
+
+
+/*------------------------------- Boutons --------------------------------------*/
+button{
+  border: none;
+  background-color: none;
+}
+  .btn-group .button-v {
+
+    background-color: var(--button-color-v);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    box-shadow: 2px 2px 15px var(--shadowbx) ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: var(--border-radus);
+  }
+  
+  .btn-group .button-v:hover {
+    background-color:var(--hover-color-v);
+  }
+
+  .btn-group .button-f {
+
+    background-color: var(--button-color-f);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    box-shadow: 2px 2px 15px var(--shadowbx) ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: var(--border-radus);
+  }
+  
+  .btn-group .button-f:hover {
+    background-color:var(--hover-color-f);
+  }
+
+
+  .button-classic {
+    background-color: var(--button-color-v);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    box-shadow: 2px 2px 15px var(--shadowbx) ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: var(--border-radus);
+  }
+
+  .button-classic:hover {
+    background-color:var(--hover-color-v);
+  }
+
+  .button-classic-d {
+    background-color: var(--button-color-f);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    box-shadow: 2px 2px 15px var(--shadowbx) ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: var(--border-radus);
+  }
+
+  .button-classic-d:hover {
+    background-color:var(--hover-color-f);
+  }
+
+
+/*------------------------------- Tableaux --------------------------------------*/
+.table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+.table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+.table th,
+.table td {
+  padding: .625em;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  .table caption {
+    font-size: 1.3em;
+  }
+  
+  .table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  .table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  .table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  .table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+/*------------------------------- input Style --------------------------------------*/
+
+.input{
+  color: #000000;
+  border-radius: var(--border-radus);
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #cccccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical
+}
+.input:hover {
+  background-color: #cccccc;
+}
+
+.fieldset{
+  border-radius: var(--border-radus);
+  border: 2px solid #cccccc;
+}
+
+/*------------------------------- alert Style --------------------------------------*/
+
+.alert-info{
+  background-color: #f591919f;
+}
+
+/*------------------------------- form --------------------------------------*/
+.form-group{
+  width: 100%;
+  padding: 5px;
+  margin:0;
+  box-sizing: border-box;
+  
+}
+input{
+  color: #000000;
+  border-radius: var(--border-radus);
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #cccccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 10px; /* Bottom margin */
+  resize: vertical;
+  text-align: center;
+}
+a{
+  text-decoration : none;
+}
